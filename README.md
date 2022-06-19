@@ -1,3 +1,3 @@
-# travel
-https://IlyaPluh.github.io/travel/travel/
-https://IlyaPluh.github.io/travel/
+# Travel
+https://IlyaPluh.github.io/Travel/travel/
+https://IlyaPluh.github.io/Travel/

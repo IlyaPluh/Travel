@@ -1,0 +1,29 @@
+.header_rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_line {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    font-size: 16px;
+    /*line-height: 2.8rem;*/
+}
+
+.navigation_link {
+    list-style: none;
+    padding: 0 42px;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+}
+
+.button_login {
+    padding: 10px 25px;
+}

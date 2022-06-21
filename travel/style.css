@@ -1,29 +1,51 @@
-.header_rectangle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+body {
+    max-width: 1440px;
 }
 
-.logo_line {
-    display: flex;
+header {
+    background: rgb(242, 120, 92, 0.7);
 }
 
-.navigation {
-    display: flex;
-    font-size: 16px;
-    /*line-height: 2.8rem;*/
+h1 {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
 }
 
-.navigation_link {
-    list-style: none;
-    padding: 0 42px;
-    cursor: pointer;
+h2 {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
 }
 
-.logo {
-    display: flex;
+h3 {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+}
+
+h4 {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
 }
 
 .button_login {
-    padding: 10px 25px;
+    font-family: 'Red Hat Text';
+    padding: 10px 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
 }

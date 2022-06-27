@@ -1,9 +1,7 @@
 body {
     max-width: 1440px;
-}
-
-header {
-    background: rgb(242, 120, 92, 0.7);
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -12,6 +10,7 @@ h1 {
     font-weight: 700;
     font-size: 80px;
     line-height: 96px;
+    color: #FFFFFF;
 }
 
 h2 {
@@ -41,11 +40,115 @@ h4 {
     color: #0D606F;
 }
 
-.button_login {
+.backgraund_header_preview {
+    background-image: url(../travel/images/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
+    background-size: 100% 100%;
+}
+
+header {
+    background: rgba(242, 120, 92, 0.7);
+    padding: 0 120px 0 120px;
+    box-shadow: 0px 5px 10px rgba(13, 96, 111, 0.7);
+}
+
+.logo_name {
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+
+.logo {
+    display: flex;
+
+}
+.logo_line {
+    display: flex;
+    cursor: pointer;
+}
+
+.header_rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
     font-family: 'Red Hat Text';
-    padding: 10px 30px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+    color: #FFFFFF;
+}
+
+.navigation_link {
+    list-style: none;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+
+.button_login {
+    padding: 10px 30px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.preview {
+    display: flex;
+    padding: 0px 428px 270px 120px;
+}
+
+.explore_text {
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 0 0 45px 0;
+}
+
+.search_text {
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+    padding: 0 315px 0 41px;
+}
+
+.button {
+    padding: 10px 32px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.search_rectangle {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
 }

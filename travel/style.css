@@ -42,7 +42,8 @@ h4 {
 
 .backgraund_header_preview {
     background-image: url(../travel/images/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -58,6 +59,7 @@ header {
     font-size: 32px;
     line-height: 39px;
     color: #FFFFFF;
+    transition: all .3s;
 }
 
 .logo {
@@ -67,6 +69,9 @@ header {
 .logo_line {
     display: flex;
     cursor: pointer;
+}
+.logo_name:hover {
+    color: gray;
 }
 
 .header_rectangle {
@@ -89,7 +94,10 @@ header {
     list-style: none;
     padding: 0 20px;
     cursor: pointer;
-
+    transition: all .3s;
+}
+.navigation_link:hover {
+    color: gray;
 }
 
 .button_login {
@@ -105,11 +113,15 @@ header {
     border-radius: 10px;
     justify-content: center;
     cursor: pointer;
+    transition: all .3s;
+}
+.button_login:hover {
+    color: gray;
 }
 
 .preview {
     display: flex;
-    padding: 0px 428px 270px 120px;
+    padding: 0px 370px 270px 120px;
 }
 
 .explore_text {
@@ -129,7 +141,6 @@ header {
     font-size: 24px;
     line-height: 29px;
     color: #F2785C;
-    padding: 0 315px 0 41px;
 }
 
 .button {
@@ -144,11 +155,127 @@ header {
     line-height: 32px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: all .3s;
+}
+.button:hover {
+    color: gray;
 }
 
 .search_rectangle {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
+    padding: 0 20px 0 41px;
+}
+
+.stepsh2 {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 0 0;
+}
+
+.three_steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 130px;
+}
+
+.ico {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.icon_square {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    background: #F2785C;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step_icon {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ico_bycicle {
+    background-image: url(../travel/images/byke.svg);
+    width: 50px;
+    height: 45px;
+}
+.ico_calendar {
+    background-image: url(../travel/images/cal.svg);
+    width: 50px;
+    height: 45px;
+}
+.ico_fly {
+    background-image: url(../travel/images/fly.svg);
+    width: 50px;
+    height: 45px;
+}
+
+.step {
+    text-align: center;
+}
+
+.destinations_name {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 0 0;
+}
+
+.destination {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.destination_img {
+    padding: 0 50px 0 0;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.destination_text {
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.ellipse{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 0 0;
+}
+.ellipse1 {
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
+}
+.ellipse2 {
+    width: 20px;
+    height: 20px;
+    background: #F2785C;
+    border-radius: 50%;
+}
+.ellipse3 {
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
 }

@@ -1,7 +1,16 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     max-width: 1440px;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -29,6 +38,7 @@ h3 {
     font-size: 35px;
     line-height: 42px;
     color: #0D606F;
+    margin: 0 0 40px 0;
 }
 
 h4 {
@@ -41,7 +51,7 @@ h4 {
 }
 
 .backgraund_header_preview {
-    background-image: url(../travel/images/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
+    background-image: url(../travel/images/main.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -64,8 +74,13 @@ header {
 
 .logo {
     display: flex;
-
 }
+
+.logo_object {
+    width: 30px;
+    width: 30px;
+}
+
 .logo_line {
     display: flex;
     cursor: pointer;
@@ -95,6 +110,7 @@ header {
     padding: 0 20px;
     cursor: pointer;
     transition: all .3s;
+    scroll-behavior: smooth;
 }
 .navigation_link:hover {
     color: gray;
@@ -180,7 +196,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 130px;
+    padding: 0 130px 30px 130px;
 }
 
 .ico {
@@ -266,16 +282,130 @@ header {
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
 }
 .ellipse2 {
     width: 20px;
     height: 20px;
     background: #F2785C;
     border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
 }
 .ellipse3 {
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
+    cursor: pointer;
 }
+
+.destination_button {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}
+
+.button_dist {
+    display: flex;
+    align-items: center;
+}
+
+.buttondist_img {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px 0 0;
+}
+
+.storie_name {
+    display: flex;
+    justify-content: center;
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    padding: 30px 120px 0 120px;
+}
+
+.story_img {
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+}
+
+.story_text {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.story_info {
+    padding: 0 0 0 40px;
+}
+
+.stories_button {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}
+
+.button_story {
+    display: flex;
+    align-items: center;
+}
+
+.buttonstory_img {
+    width: 35px;
+    height: 22px;
+    padding: 0 12px 0 0;
+}
+
+.backgroundstoriefoot {
+    background-image: url(../travel/images/foot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fon {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_footer{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.ico_insta {
+    background-image: url(../travel/images/insta.svg);
+    width: 31px;
+    height: 31px;
+    margin-right: 25px;
+}
+
+.ico_youtube {
+    background-image: url(../travel/images/tube.svg);
+    width: 31px;
+    height: 28px;
+    margin-right: 25px;
+}
+
+.ico_twitter {
+    background-image: url(../travel/images/twit.svg);
+    width: 31px;
+    height: 28px;
+}
+

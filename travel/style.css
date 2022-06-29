@@ -376,8 +376,17 @@ header {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.social {
+    padding-right: 30px;
+    align-items: center;
+}
+
+.text {
+    padding-right: 300px;
 }
 
 .text_footer{
@@ -389,6 +398,10 @@ footer {
     color: #FFFFFF;
 }
 
+.footer_ico {
+    align-items: center;
+}
+
 .ico_insta {
     background-image: url(../travel/images/insta.svg);
     width: 31px;
@@ -397,15 +410,17 @@ footer {
 }
 
 .ico_youtube {
-    background-image: url(../travel/images/tube.svg);
-    width: 31px;
+    background-image: url(../travel/images/youtube.svg);
+    width: 33px;
     height: 28px;
     margin-right: 25px;
+    margin-bottom: 1px;
 }
 
 .ico_twitter {
     background-image: url(../travel/images/twit.svg);
     width: 31px;
     height: 28px;
+    margin-bottom: 1px;
 }
 

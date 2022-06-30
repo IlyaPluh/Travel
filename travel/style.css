@@ -130,6 +130,7 @@ header {
     justify-content: center;
     cursor: pointer;
     transition: all .3s;
+    border: none
 }
 .button_login:hover {
     color: gray;
@@ -172,6 +173,7 @@ header {
     color: #FFFFFF;
     cursor: pointer;
     transition: all .3s;
+    border: none
 }
 .button:hover {
     color: gray;

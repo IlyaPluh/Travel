@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
 body {
@@ -84,6 +85,7 @@ header {
 .logo_line {
     display: flex;
     cursor: pointer;
+    align-items: center;
 }
 .logo_name:hover {
     color: gray;
@@ -426,3 +428,97 @@ footer {
     margin-bottom: 1px;
 }
 
+.hamburger {
+    display: none;
+    width: 35px;
+    height: 32px;
+    position: relative;
+    margin: 8px 4.4px;
+}
+.hamburger:before{
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.hamburger:after{
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+.hamburger_line {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    top: calc(50% - 1px);
+    left: 0;
+}
+
+@media screen and (max-width: 390px) {
+    .hamburger {
+        display: inline-block;
+    }
+    .logo_name {
+        display: none;
+    }
+    .header_navigation {
+        display: none;
+    }
+    .header_button {
+        display: none;
+    }
+    .logo_line {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header {
+        padding: 45px 25px 0 16px;
+        box-shadow: none;
+        background: none;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+    }
+    .backgraund_header_preview {
+        background-image: url(../travel/images/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    h1 {
+        display: none;
+    }
+    .explore_text {
+        display: none;
+    }
+    .search_text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .button {
+        font-size: 11px;
+        line-height: 15px;
+        padding: 7px 9px;
+    }
+    .preview {
+        padding: 50px 15px 60px 15px;
+    }
+    .search_rectangle {
+        padding: 0 60px;
+    }
+    body {
+        max-width: 390px;
+    }
+}

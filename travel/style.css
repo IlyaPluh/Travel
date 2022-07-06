@@ -1,10 +1,11 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
 body {
     max-width: 1440px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0; 
 }
 
@@ -84,6 +85,7 @@ header {
 .logo_line {
     display: flex;
     cursor: pointer;
+    align-items: center;
 }
 .logo_name:hover {
     color: gray;
@@ -130,6 +132,7 @@ header {
     justify-content: center;
     cursor: pointer;
     transition: all .3s;
+    border: none
 }
 .button_login:hover {
     color: gray;
@@ -172,6 +175,7 @@ header {
     color: #FFFFFF;
     cursor: pointer;
     transition: all .3s;
+    border: none
 }
 .button:hover {
     color: gray;
@@ -317,7 +321,9 @@ header {
     height: 40px;
     padding: 0 12px 0 0;
 }
-
+.buttondistS_img {
+    display: none;
+}
 .storie_name {
     display: flex;
     justify-content: center;
@@ -424,3 +430,271 @@ footer {
     margin-bottom: 1px;
 }
 
+.hamburger {
+    display: none;
+    width: 35px;
+    height: 32px;
+    position: relative;
+    margin: 8px 4.4px;
+}
+.hamburger:before{
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+}
+.hamburger:after{
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+.hamburger_line {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.7px;
+    width: 100%;
+    top: calc(50% - 1px);
+    left: 0;
+}
+
+.destination2S {
+    display: none;
+}
+.storyS_img {
+    display: none;
+}
+@media screen and (max-width: 390px) {
+    .hamburger {
+        display: inline-block;
+    }
+    .logo_name {
+        display: none;
+    }
+    .header_navigation {
+        display: none;
+    }
+    .header_button {
+        display: none;
+    }
+    .logo_line {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header {
+        padding: 45px 25px 0 16px;
+        box-shadow: none;
+        background: none;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+    }
+    .backgraund_header_preview {
+        background-image: url(../travel/images/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    h1 {
+        display: none;
+    }
+    .explore_text {
+        display: none;
+    }
+    .search_text {
+        font-size: 14px;
+        line-height: 17px;
+        padding-right: 60px;
+    }
+    .button {
+        font-size: 11px;
+        line-height: 15px;
+        padding: 7px 9px;
+    }
+    .preview {
+        padding: 50px 15px 60px 15px;
+    }
+    body {
+        max-width: 390px;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .stepsh2 {
+        padding: 10px 0;
+    }
+    .three_steps {
+        padding: 0;
+        text-align: center;
+        align-items: unset;
+    }
+    h4 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .step {
+        padding: 0 15px;
+        width: 90px;
+    }
+    .step_icon {
+        width: 70px;
+        height: 70px;
+    }
+    .icon_square {
+        width: 70px;
+        height: 70px;
+    }
+    .ico_bycicle {
+        background-image: url(../travel/images/bykeS.svg);
+        width: 35px;
+        height: 32px;
+    }
+    .ico_calendar {
+        background-image: url(../travel/images/calS.svg);
+        width: 35px;
+        height: 35px;
+    }
+    .ico_fly {
+        background-image: url(../travel/images/flyS.svg);
+        width: 40px;
+        height: 30px;
+    }
+    .destinations_name {
+        padding: 0 0 10px 0;
+    }
+    .destination1 {
+        display: none;
+    }
+    .destination3 {
+        display: none;
+    }
+    .destination2 {
+        display: none;
+        /* background-image: url(../travel/images/Rectangle\ 23S.jpg);
+        width: 360px;
+        height: 210px;
+    }
+    .destination_img{
+        display: none; */
+    }
+    .destination2S {
+        display: block;
+    }
+    .destinationS_img {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .destinationS_text {
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        position: absolute;
+        top: -10px;
+        left: 15px;
+    }
+    .ellipse {
+        position: absolute;
+        top: 650px;
+        left: 172px;
+    }
+    .ellipse1 {
+        width: 8px;
+        height: 8px;
+    }
+    .ellipse2 {
+        width: 8px;
+        height: 8px;
+    }
+    .ellipse3 {
+        width: 8px;
+        height: 8px;
+    }
+    .buttondist_img {
+        display: none;
+    }
+    .buttondistS_img {
+        display: block;
+        width: 9px;
+        height: 5px;
+        padding-right: 5px;
+
+    }
+    .destination_button {
+        padding: 10px 0;
+    }
+    .backgroundstoriefoot {
+        background-image: url(../travel/images/Rectangle\ 27S.jpg);
+        background-size: auto;
+    }
+    h3 {
+        font-size: 11px;
+        line-height: 13px;
+        margin: 0;
+    }
+    .story_text {
+        font-size: 9px;
+        line-height: 11px;
+        margin: 10px 0 0 0;
+    }
+    .story_img {
+        display: none;
+    }
+    .storyS_img {
+        display: block;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        border-radius: 16px;
+    }
+    .story {
+        padding: 0 15px;
+        align-items: unset;
+    }
+    .story_info {
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    .story_img1 {
+        padding: 10px 0 5px 0;
+    }
+    .story_img2 {
+        padding: 10px 0 5px 0;
+    }
+    .story_img3 {
+        padding: 10px 0 5px 0;
+    }
+    .story_img4 {
+        padding: 10px 0 5px 0;
+    }
+    .buttonstory_img {
+        display: none;
+    }
+    .stories_button {
+        padding: 10px 0;
+    }
+    .text {
+        display: none;
+    }
+    footer {
+        justify-content: center;
+    }
+    .footer_ico {
+        padding: 0;
+    }
+    .social {
+        padding-right: 0;
+    }
+}

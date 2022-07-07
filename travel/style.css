@@ -497,6 +497,12 @@ footer {
 .storyS_img {
     display: none;
 }
+.Account {
+    display: none;
+}
+.SocialMedia {
+    display: none;
+}
 @media screen and (max-width: 390px) {
     .hamburger {
         display: inline-block;

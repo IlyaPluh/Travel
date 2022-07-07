@@ -666,6 +666,9 @@ footer {
         line-height: 13px;
         margin: 0;
     }
+    .stories4 {
+        padding: 0;
+    }
     .story_text {
         font-size: 9px;
         line-height: 11px;

@@ -39,7 +39,8 @@ h3 {
     font-size: 35px;
     line-height: 42px;
     color: #0D606F;
-    margin: 0 0 40px 0;
+    /* margin: 0 0 40px 0; */
+    margin: 0;
 }
 
 h4 {
@@ -328,18 +329,33 @@ header {
     display: flex;
     justify-content: center;
 }
-
+.stories4 {
+    padding: 40px 120px 10px 120px;
+}
 .story {
     display: flex;
-    align-items: center;
-    padding: 30px 120px 0 120px;
+    /* align-items: center;
+    padding: 30px 120px 0 120px; */
+    padding: 0 15px;
+    align-items: unset;
 }
 
 .story_img {
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
 }
-
+.story_img1 {
+    padding: 0 40px 30px 0;
+}
+.story_img2 {
+    padding: 0 40px 30px 0;
+}
+.story_img3 {
+    padding: 0 40px 30px 0;
+}
+.story_img4 {
+    padding: 0 40px 30px 0;
+}
 .story_text {
     font-family: 'Aleo';
     font-style: normal;
@@ -347,16 +363,20 @@ header {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+
+    margin: 10px 0 0 0;
 }
 
 .story_info {
-    padding: 0 0 0 40px;
+    /* padding: 0 0 0 40px; */
+    padding-left: 10px;
+    padding-top: 15px;
 }
 
 .stories_button {
     display: flex;
     justify-content: center;
-    padding: 40px 0 40px 0;
+    padding: 0px 0 40px 0;
 }
 
 .button_story {

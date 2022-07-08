@@ -497,22 +497,44 @@ footer {
 .storyS_img {
     display: none;
 }
+.Account {
+    display: none;
+}
+.SocialMedia {
+    display: none;
+}
+
 @media screen and (max-width: 390px) {
     .hamburger {
         display: inline-block;
+        margin: 0;
     }
     .logo_name {
         display: none;
     }
+    .Account {
+        display: block;
+    }
+    .SocialMedia {
+        display: block;
+    }
     .header_navigation {
         display: none;
+        background: #F2785C;
+        border-radius: 10px;
+    }
+    .navigation {
+        display: contents;
     }
     .header_button {
         display: none;
     }
     .logo_line {
         justify-content: space-between;
-        width: 100%;
+        /* width: 100%; */
+    }
+    .header_navigation {
+        margin: -40px 0;
     }
     .header {
         padding: 45px 25px 0 16px;

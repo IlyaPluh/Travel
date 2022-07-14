@@ -535,6 +535,8 @@ footer {
     }
     .header_navigation {
         margin: -40px 0;
+        /* z-index: 2;
+        position: absolute; */
     }
     .header {
         padding: 45px 25px 0 16px;
@@ -741,5 +743,8 @@ footer {
     }
     .social {
         padding-right: 0;
+    }
+    .nav__active {
+        transform: translateX(0);
     }
 }

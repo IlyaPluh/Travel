@@ -15,3 +15,17 @@ $(document).on('click', function(e)
         container.hide(400);
     }
 });
+
+const login = document.querySelector('.button_login');
+const popup = document.querySelector('.pop-up');
+
+login.addEventListener('click', () => {
+    popup.classList.toggle('hidden')
+})
+
+popup.addEventListener('click', (event) => {
+    if (event.target.classList.contains('pop-up')) {
+        popup.classList.toggle('hidden')
+        console.log(event)
+    }
+})

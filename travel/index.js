@@ -1,9 +1,8 @@
 $(document).ready(function() {
     $('.hamburger').click(function() {
       $('.header_navigation').slideToggle(400);
-    });//end slide toggle
+    });
 });
-
 $(document).on('click', function(e) 
 {
     var container = $('.header_navigation');
@@ -15,3 +14,47 @@ $(document).on('click', function(e)
         container.hide(400);
     }
 });
+
+
+const login = document.querySelector('.button_login');
+const popup = document.querySelector('.pop-up');
+const popupcontent = document.querySelector('.pop-up_content');
+const signin = document.querySelector('.signin_button');
+const email = document.querySelector('.email_input');
+const pass = document.querySelector('.pass_input');
+const register = document.querySelector('.reg');
+const signup = document.querySelector('.signup_button')
+const account = document.querySelector('.Account')
+let tooglenone = document.querySelectorAll('.tooglenone')
+let toogleblock = document.querySelectorAll('.toogleblock')
+
+login.addEventListener('click', () => {
+    popup.classList.toggle('hidden')
+    popupcontent.style.transform = "translateY(0)"
+})
+
+account.addEventListener('click', () => {
+    popup.classList.toggle('hidden')
+    popupcontent.style.transform = "translateY(0)"
+})
+
+popup.addEventListener('click', (event) => {
+    if (event.target.classList.contains('pop-up')) {
+        popup.classList.toggle('hidden')
+        popupcontent.style.transform = "translateY(-750px)"
+    }
+})
+
+signin.addEventListener('click', () => {
+    alert(`E-mail: ${email.value}\nPassword: ${pass.value}`);
+})
+
+signup.addEventListener('click', () => {
+    alert(`E-mail: ${email.value}\nPassword: ${pass.value}`);
+})
+
+register.addEventListener('click', () => {
+    tooglenone.forEach(el => el.classList.toggle('none'))
+    toogleblock.forEach(el => el.classList.toggle('block'))
+    register.textContent === 'Register' ? register.textContent = 'Log in' : register.textContent = 'Register'
+})

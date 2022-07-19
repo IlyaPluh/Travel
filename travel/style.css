@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
 body {
@@ -51,6 +51,271 @@ h4 {
     line-height: 24px;
     color: #0D606F;
 }
+
+
+/* Создаем popup */
+.pop-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(20,20,20, 0.3);
+    z-index: 1;
+}
+.hidden {
+    visibility: hidden;
+}
+.none {
+    display: none!important;
+}
+.block {
+    display: block!important;
+}
+.pop-up_content {
+    transform: translateY(-750px);
+    transition: all .4s linear;
+    /* position: relative; */
+    overflow: auto;
+    width: 650px;
+    max-height: 95%;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pop-up_name {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    margin: 25px 0 30px 0;
+}
+.pop-up_name2 {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    margin: 25px 0 20px 0;
+    display: none;
+}
+.facebook_button {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    padding: 15px 160px;
+}
+.facebook_button:hover {
+    color: #F2785C;
+}
+.ico_facebook {
+    background-image: url(../travel/images/face.svg);
+    width: 23px;
+    height: 22.86px;
+    padding: 0 15px 0 0;
+    background-repeat: no-repeat;
+}
+.google_button {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    padding: 15px 170px;
+    margin-top: 20px;
+}
+.google_button:hover {
+    color: #F2785C;
+}
+.ico_google {
+    background-image: url(../travel/images/Untitled.svg);
+    width: 24px;
+    height: 24px;
+    padding: 0 15px 0 0;
+    background-repeat: no-repeat;
+}
+.OR_popup {
+    display: flex;
+    padding: 30px 0 20px 0;
+}
+.OR_text {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: rgba(13, 96, 111, 0.5);
+    margin: auto;
+    padding: 0 9px;
+}
+/* .popup_email {
+    display: flex;
+    flex-direction: column;
+} */
+.email {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin: 10px 0 5px 0;
+}
+.email_input {
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-size: 43px;
+}
+/* .popup_pass {
+    display: flex;
+    flex-direction: column;
+} */
+.pass {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin: 20px 0 5px 0;
+}
+.pass_input {
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-size: 43px;
+}
+.signin_button {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    padding: 15px 240px;
+}
+.signin_button:hover {
+    color: #F2785C;
+}
+.signup_button {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    padding: 15px 240px;
+    margin: 0 0 10px 0;
+    display: none;
+}
+.signup_button:hover {
+    color: #F2785C;
+}
+.button_signin {
+    padding: 25px 0 0 0;
+}
+.forgotpass {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    margin: 10px 0;
+    cursor: pointer;
+}
+.accreg {
+    display: flex;
+    padding: 14px 0 27px 0;
+}
+.account {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    padding-right: 3px;
+    margin: 0;
+}
+.account2 {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    padding-right: 3px;
+    margin: 0;
+    display: none;
+}
+.reg {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    cursor: pointer;
+    margin: 0;
+}
+
+/* popup закончен */
+
+
 
 .backgraund_header_preview {
     background-image: url(../travel/images/main.jpg);
@@ -504,7 +769,45 @@ footer {
     display: none;
 }
 
+
+
+
 @media screen and (max-width: 390px) {
+    /* Делаем popup для mobile */
+.pop-up_content {
+    width: 350px;
+}
+.facebook_button {
+    padding: 5px 40px;
+}
+.google_button {
+    padding: 5px 50px;
+}
+.email_input {
+    font-size: 30px;
+}
+.pass_input {
+    font-size: 30px;
+}
+.signin_button {
+    padding: 5px 130px;
+}
+.signup_button {
+    padding: 5px 130px;
+}
+.line1_img {
+    width: 140px;
+}
+.line2_img {
+    width: 140px;
+}
+.line3_img1 {
+    width: 300px;
+}
+.line3_img2 {
+    display: none;
+}
+    
     .hamburger {
         display: inline-block;
         margin: 0;

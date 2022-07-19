@@ -23,8 +23,17 @@ const signin = document.querySelector('.signin_button');
 const email = document.querySelector('.email_input');
 const pass = document.querySelector('.pass_input');
 const register = document.querySelector('.reg');
+const signup = document.querySelector('.signup_button')
+const account = document.querySelector('.Account')
+let tooglenone = document.querySelectorAll('.tooglenone')
+let toogleblock = document.querySelectorAll('.toogleblock')
 
 login.addEventListener('click', () => {
+    popup.classList.toggle('hidden')
+    popupcontent.style.transform = "translateY(0)"
+})
+
+account.addEventListener('click', () => {
     popup.classList.toggle('hidden')
     popupcontent.style.transform = "translateY(0)"
 })
@@ -40,6 +49,12 @@ signin.addEventListener('click', () => {
     alert(`E-mail: ${email.value}\nPassword: ${pass.value}`);
 })
 
-register.addEventListener('click', () => {
+signup.addEventListener('click', () => {
+    alert(`E-mail: ${email.value}\nPassword: ${pass.value}`);
+})
 
+register.addEventListener('click', () => {
+    tooglenone.forEach(el => el.classList.toggle('none'))
+    toogleblock.forEach(el => el.classList.toggle('block'))
+    register.textContent === 'Register' ? register.textContent = 'Log in' : register.textContent = 'Register'
 })

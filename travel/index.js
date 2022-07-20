@@ -58,3 +58,18 @@ register.addEventListener('click', () => {
     toogleblock.forEach(el => el.classList.toggle('block'))
     register.textContent === 'Register' ? register.textContent = 'Log in' : register.textContent = 'Register'
 })
+
+
+//slider
+let offset = 0;
+const slider = document.querySelectorAll('.destination_img')
+
+// slider.addEventListener('click', (event) => {
+//     if (event.target.classList.contains('destination_img')) {
+//         offset += 840
+//         slider.forEach(el => el.style.left = -offset + 'px')
+//     }})
+
+slider.forEach(el => el.firstElementChild.addEventListener('click', () => {
+    console.log(el.firstElementChild)
+}))

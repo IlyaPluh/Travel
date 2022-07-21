@@ -31,17 +31,20 @@ let toogleblock = document.querySelectorAll('.toogleblock')
 login.addEventListener('click', () => {
     popup.classList.toggle('hidden')
     popupcontent.style.transform = "translateY(0)"
+    document.body.style.overflow = 'hidden'
 })
 
 account.addEventListener('click', () => {
     popup.classList.toggle('hidden')
     popupcontent.style.transform = "translateY(0)"
+    document.body.style.overflow = 'hidden'
 })
 
 popup.addEventListener('click', (event) => {
     if (event.target.classList.contains('pop-up')) {
         popup.classList.toggle('hidden')
         popupcontent.style.transform = "translateY(-750px)"
+        document.body.style.overflow = 'unset'
     }
 })
 

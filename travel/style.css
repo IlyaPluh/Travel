@@ -530,6 +530,7 @@ header {
     position: relative;
     text-align: center;
     color: white;
+    transition: all .5s;
 }
 
 .destination_text {

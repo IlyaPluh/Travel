@@ -64,15 +64,70 @@ register.addEventListener('click', () => {
 
 
 //slider
-let offset = 0;
-const slider = document.querySelectorAll('.destination_img')
 
-// slider.addEventListener('click', (event) => {
-//     if (event.target.classList.contains('destination_img')) {
-//         offset += 840
-//         slider.forEach(el => el.style.left = -offset + 'px')
-//     }})
+let slider = document.querySelectorAll('.destination_img')
+let offset = 0
+const removestyle = () => {
+    slider[0].style.transition = 'none'
+    slider[1].style.transition = 'none'
+    slider[2].style.transition = 'none'
+    slider[0].style.left = ''
+    slider[1].style.left = ''
+    slider[2].style.left = ''
+    slider[0].style.transform = `translate(0)`
+    slider[1].style.transform = `translate(0)`
+    slider[2].style.transform = `translate(0)`
+}
 
-slider.forEach(el => el.firstElementChild.addEventListener('click', () => {
-    console.log(el.firstElementChild)
-}))
+document.querySelector('.destinations').addEventListener('click', (event) => {
+//slider.forEach(el => el.addEventListener('click', (event) => {
+//right = document.querySelector('.right')
+    
+    if (event.target.classList.contains('right')) 
+    {   
+    
+    if (offset === 0) {
+        
+        slider[0].style.transition = 'all .5s'
+        slider[1].style.transition = 'all .5s'
+        slider[2].style.transition = 'all .5s'
+
+        offset += 850
+        slider[0].style.left = '2550px'
+        slider[0].style.transform = `translate(-${offset}px)`
+        slider[1].style.transform = `translate(-${offset}px)`
+        slider[2].style.transform = `translate(-${offset}px)`
+        slider[1].firstElementChild.classList.toggle('left')
+        slider[0].firstElementChild.classList.toggle('right')
+        slider[0].firstElementChild.classList.toggle('left')
+        slider[2].firstElementChild.classList.toggle('right')
+        
+    } else if(offset === 850) {
+        offset += 850
+        slider[1].style.left = '2550px'
+        slider[1].style.transform = `translate(-${offset}px)`
+        slider[0].style.transform = `translate(-${offset}px)`
+        slider[2].style.transform = `translate(-${offset}px)`
+        slider[1].firstElementChild.classList.toggle('left')
+        slider[0].firstElementChild.classList.toggle('right')
+        slider[1].firstElementChild.classList.toggle('right')
+        slider[2].firstElementChild.classList.toggle('left')
+    } else if (offset === 1700) {
+        offset += 850
+        slider[2].style.left = '2550px'
+        slider[2].style.transform = `translate(-${offset}px)`
+        slider[0].style.transform = `translate(-${offset}px)`
+        slider[1].style.transform = `translate(-${offset}px)`
+        slider[1].firstElementChild.classList.toggle('right')
+        slider[2].firstElementChild.classList.toggle('right')
+        slider[0].firstElementChild.classList.toggle('left')
+        slider[2].firstElementChild.classList.toggle('left')
+        offset = 0
+        setTimeout(removestyle, 400)
+    }
+    }
+})
+
+
+
+

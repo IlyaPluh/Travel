@@ -67,6 +67,31 @@ register.addEventListener('click', () => {
 
 let slider = document.querySelectorAll('.destination_img')
 let offset = 0
+const addstyle = () => {
+    slider[0].style.transition = 'all .5s'
+    slider[1].style.transition = 'all .5s'
+    slider[2].style.transition = 'all .5s'
+    slider[1].style.left = '2550px'
+    offset = 1700
+    slider[1].style.transform = `translate(-${offset}px)`
+    slider[0].style.transform = `translate(-${offset}px)`
+    slider[2].style.transform = `translate(-${offset}px)`
+    slider[1].firstElementChild.classList.toggle('left')
+    slider[0].firstElementChild.classList.toggle('right')
+    slider[1].firstElementChild.classList.toggle('right')
+    slider[2].firstElementChild.classList.toggle('left')
+}
+const removestyle2 = () => {
+    slider[0].style.transition = 'none'
+    slider[1].style.transition = 'none'
+    slider[2].style.transition = 'none'
+    slider[0].style.left = '2550px'
+    slider[1].style.left = ''
+    slider[2].style.left = ''
+    slider[0].style.transform = `translate(-850px)`
+    slider[1].style.transform = `translate(-850px)`
+    slider[2].style.transform = `translate(-850px)`
+}
 const removestyle = () => {
     slider[0].style.transition = 'none'
     slider[1].style.transition = 'none'
@@ -79,53 +104,125 @@ const removestyle = () => {
     slider[2].style.transform = `translate(0)`
 }
 
-document.querySelector('.destinations').addEventListener('click', (event) => {
+document.querySelector('.destination').addEventListener('click', (event) => {
 //slider.forEach(el => el.addEventListener('click', (event) => {
 //right = document.querySelector('.right')
-    
-    if (event.target.classList.contains('right')) 
+event = event.target.parentElement
+console.log(event.parentElement)
+    if (event.parentElement.classList.contains('destination3')) 
     {   
-    
-    if (offset === 0) {
-        
-        slider[0].style.transition = 'all .5s'
-        slider[1].style.transition = 'all .5s'
-        slider[2].style.transition = 'all .5s'
-
         offset += 850
         slider[0].style.left = '2550px'
         slider[0].style.transform = `translate(-${offset}px)`
         slider[1].style.transform = `translate(-${offset}px)`
         slider[2].style.transform = `translate(-${offset}px)`
-        slider[1].firstElementChild.classList.toggle('left')
-        slider[0].firstElementChild.classList.toggle('right')
-        slider[0].firstElementChild.classList.toggle('left')
         slider[2].firstElementChild.classList.toggle('right')
+        let slider2 = [slider[1], slider[2], slider[0]]
+        slider = slider2
+        slider[2].firstElementChild.classList.toggle('right')}
+    
+    // else if (event.target.classList.contains('left')) 
+    //     {   
+    //         offset -= 850
+    //         slider[2].style.left = '-2550px'
+    //         slider[2].style.transform = `translate(${-offset}px)`
+    //         slider[1].style.transform = `translate(${-offset}px)`
+    //         slider[0].style.transform = `translate(${-offset}px)`
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         let slider2 = [slider[2], slider[0], slider[1]]
+    //         slider = slider2
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         console.log(slider)}
+        //setTimeout(removestyle, 400)
+    //     if (offset === 0) {
         
-    } else if(offset === 850) {
-        offset += 850
-        slider[1].style.left = '2550px'
-        slider[1].style.transform = `translate(-${offset}px)`
-        slider[0].style.transform = `translate(-${offset}px)`
-        slider[2].style.transform = `translate(-${offset}px)`
-        slider[1].firstElementChild.classList.toggle('left')
-        slider[0].firstElementChild.classList.toggle('right')
-        slider[1].firstElementChild.classList.toggle('right')
-        slider[2].firstElementChild.classList.toggle('left')
-    } else if (offset === 1700) {
-        offset += 850
-        slider[2].style.left = '2550px'
-        slider[2].style.transform = `translate(-${offset}px)`
-        slider[0].style.transform = `translate(-${offset}px)`
-        slider[1].style.transform = `translate(-${offset}px)`
-        slider[1].firstElementChild.classList.toggle('right')
-        slider[2].firstElementChild.classList.toggle('right')
-        slider[0].firstElementChild.classList.toggle('left')
-        slider[2].firstElementChild.classList.toggle('left')
-        offset = 0
-        setTimeout(removestyle, 400)
-    }
-    }
+    //         slider[0].style.transition = 'all .5s'
+    //         slider[1].style.transition = 'all .5s'
+    //         slider[2].style.transition = 'all .5s'
+
+    //         offset += 850
+    //         slider[0].style.left = '2550px'
+    //         slider[0].style.transform = `translate(-${offset}px)`
+    //         slider[1].style.transform = `translate(-${offset}px)`
+    //         slider[2].style.transform = `translate(-${offset}px)`
+    //         slider[1].firstElementChild.classList.toggle('left')
+    //         slider[0].firstElementChild.classList.toggle('right')
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         slider[2].firstElementChild.classList.toggle('right')
+        
+    //     } else if(offset === 850 || offset === -1700) {
+    //         removestyle2();
+    //         setTimeout(addstyle, 1);
+    //         let slider2 = [slider[1], slider[0], slider[2]]
+    //         slider=slider2
+    //         console.log(slider)
+    //         // slider[0].style.transition = 'all .5s'
+    //         // slider[1].style.transition = 'all .5s'
+    //         // slider[2].style.transition = 'all .5s'
+    //         // offset += 850
+    //         // slider[1].style.left = '2550px'
+    //         // slider[1].style.transform = `translate(-${offset}px)`
+    //         // slider[0].style.transform = `translate(-${offset}px)`
+    //         // slider[2].style.transform = `translate(-${offset}px)`
+    //         // slider[1].firstElementChild.classList.toggle('left')
+    //         // slider[0].firstElementChild.classList.toggle('right')
+    //         // slider[1].firstElementChild.classList.toggle('right')
+    //         // slider[2].firstElementChild.classList.toggle('left')
+    //     } else if (offset === 1700 || offset === -850) {
+    //         offset += 850
+    //         slider[2].style.left = '2550px'
+    //         slider[2].style.transform = `translate(-${offset}px)`
+    //         slider[0].style.transform = `translate(-${offset}px)`
+    //         slider[1].style.transform = `translate(-${offset}px)`
+    //         slider[1].firstElementChild.classList.toggle('right')
+    //         slider[2].firstElementChild.classList.toggle('right')
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         slider[2].firstElementChild.classList.toggle('left')
+    //         offset = 0
+    //         setTimeout(removestyle, 400)
+    // }
+    // }
+    // else if (event.target.classList.contains('left')) {
+    //     if (offset === 0) {
+        
+    //         slider[0].style.transition = 'all .5s'
+    //         slider[1].style.transition = 'all .5s'
+    //         slider[2].style.transition = 'all .5s'
+    
+    //         offset -= 850
+    //         slider[2].style.left = '-2550px'
+    //         slider[2].style.transform = `translate(${-offset}px)`
+    //         slider[0].style.transform = `translate(${-offset}px)`
+    //         slider[1].style.transform = `translate(${-offset}px)`
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         slider[1].firstElementChild.classList.toggle('right')
+    //         slider[2].firstElementChild.classList.toggle('left')
+    //         slider[2].firstElementChild.classList.toggle('right')
+            
+    //     } else if(offset === -850 || offset === 1700) {
+    //         offset -= 850
+    //         slider[1].style.left = '-2550px'
+    //         slider[1].style.transform = `translate(${-offset}px)`
+    //         slider[0].style.transform = `translate(${-offset}px)`
+    //         slider[2].style.transform = `translate(${-offset}px)`
+    //         slider[1].firstElementChild.classList.toggle('left')
+    //         slider[1].firstElementChild.classList.toggle('right')
+    //         slider[0].firstElementChild.classList.toggle('right')
+    //         slider[2].firstElementChild.classList.toggle('left')
+    //     } else if (offset === -1700 || offset === 850) {
+    //         offset -= 850
+    //         slider[0].style.left = '-2550px'
+    //         slider[0].style.transform = `translate(${-offset}px)`
+    //         slider[1].style.transform = `translate(${-offset}px)`
+    //         slider[2].style.transform = `translate(${-offset}px)`
+    //         slider[0].firstElementChild.classList.toggle('right')
+    //         slider[2].firstElementChild.classList.toggle('right')
+    //         slider[0].firstElementChild.classList.toggle('left')
+    //         slider[1].firstElementChild.classList.toggle('left')
+    //         offset = 0
+    //         setTimeout(removestyle, 400)
+    //     }
+   // }
 })
 
 

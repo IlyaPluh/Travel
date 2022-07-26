@@ -1,3 +1,4 @@
+path{ fill:inherit; stroke:inherit;}
 html {
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
@@ -522,6 +523,7 @@ header {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
 .destination_img {
@@ -529,6 +531,7 @@ header {
     position: relative;
     text-align: center;
     color: white;
+    transition: all .45s;
 }
 
 .destination_text {
@@ -541,36 +544,37 @@ header {
     font-size: 32px;
     line-height: 42px;
 }
-
-.ellipse{
+.ico_arrl {
+    position: absolute;
+    top: 145px;
+    left: 20px;
+    fill: #F2785C;
+    z-index: 1;
+    display: none;
+}
+.ico_arr {
+    position: absolute;
+    top: 145px;
+    right: 20px;
+    fill: #F2785C;
+    z-index: 1;
+    display: none;
+}
+.ellipses{
     display: flex;
     justify-content: center;
     padding: 24px 0 0 0;
 }
-.ellipse1 {
+.ellipse {
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
     margin-right: 10px;
-    cursor: pointer;
 }
-.ellipse2 {
-    width: 20px;
-    height: 20px;
+.active {
     background: #F2785C;
-    border-radius: 50%;
-    margin-right: 10px;
-    cursor: pointer;
 }
-.ellipse3 {
-    width: 20px;
-    height: 20px;
-    background: rgba(242, 120, 92, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 .destination_button {
     display: flex;
     justify-content: center;
@@ -589,6 +593,22 @@ header {
 }
 .buttondistS_img {
     display: none;
+}
+.left {
+    position: absolute;
+    left: 0;
+    width: calc((100vw - 950px)/2);
+    max-width: 260px;
+    height: 800px;
+    cursor: pointer;
+}
+.right {
+    position: absolute;
+    right: 0;
+    width: calc((100vw - 850px)/2);
+    max-width: 300px;
+    height: 800px;
+    cursor: pointer;
 }
 .storie_name {
     display: flex;
@@ -756,7 +776,13 @@ footer {
     left: 0;
 }
 
+.destination1S {
+    display: none;
+}
 .destination2S {
+    display: none;
+}
+.destination3S {
     display: none;
 }
 .storyS_img {
@@ -915,6 +941,11 @@ footer {
         width: 40px;
         height: 30px;
     }
+    .destination {
+        justify-content: flex-start;
+        overflow: visible;
+        transition: all .4s;
+    }
     .destinations_name {
         padding: 0 0 10px 0;
     }
@@ -936,10 +967,21 @@ footer {
     .destination2S {
         display: block;
     }
+    .destination1S {
+        display: block;
+    }
+    .destination3S {
+        display: block;
+    }
+    .destinations {
+        position: relative;
+        overflow: hidden;
+    }
     .destinationS_img {
         position: relative;
         text-align: center;
         color: white;
+        padding: 0 15px;
     }
     .destinationS_text {
         font-family: 'Red Hat Text';
@@ -950,25 +992,18 @@ footer {
         color: #FFFFFF;
         position: absolute;
         top: -10px;
-        left: 15px;
+        left: 25px;
+    }
+    .ellipses {
+        position: absolute;
+        top: 210px;
+        left: 170px;
     }
     .ellipse {
-        position: absolute;
-        top: 650px;
-        left: 172px;
-    }
-    .ellipse1 {
         width: 8px;
         height: 8px;
     }
-    .ellipse2 {
-        width: 8px;
-        height: 8px;
-    }
-    .ellipse3 {
-        width: 8px;
-        height: 8px;
-    }
+    
     .buttondist_img {
         display: none;
     }
@@ -1044,5 +1079,23 @@ footer {
     }
     .social {
         padding-right: 0;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+    .ico_arr {
+        display: block;
+    }
+    .ico_arrl {
+        display: block;
+    }
+    .active {
+        background: rgba(242, 120, 92, 0.5);
+    }
+    .activem {
+        background: #F2785C;
     }
 }

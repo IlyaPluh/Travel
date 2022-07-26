@@ -66,165 +66,78 @@ register.addEventListener('click', () => {
 //slider
 
 let slider = document.querySelectorAll('.destination_img')
+let ellipse = document.querySelectorAll('.ellipse')
 let offset = 0
-const addstyle = () => {
-    slider[0].style.transition = 'all .5s'
-    slider[1].style.transition = 'all .5s'
-    slider[2].style.transition = 'all .5s'
-    slider[1].style.left = '2550px'
-    offset = 1700
-    slider[1].style.transform = `translate(-${offset}px)`
-    slider[0].style.transform = `translate(-${offset}px)`
-    slider[2].style.transform = `translate(-${offset}px)`
-    slider[1].firstElementChild.classList.toggle('left')
-    slider[0].firstElementChild.classList.toggle('right')
-    slider[1].firstElementChild.classList.toggle('right')
-    slider[2].firstElementChild.classList.toggle('left')
-}
-const removestyle2 = () => {
-    slider[0].style.transition = 'none'
-    slider[1].style.transition = 'none'
-    slider[2].style.transition = 'none'
-    slider[0].style.left = '2550px'
-    slider[1].style.left = ''
-    slider[2].style.left = ''
-    slider[0].style.transform = `translate(-850px)`
-    slider[1].style.transform = `translate(-850px)`
-    slider[2].style.transform = `translate(-850px)`
-}
+let n = 1
 const removestyle = () => {
-    slider[0].style.transition = 'none'
-    slider[1].style.transition = 'none'
-    slider[2].style.transition = 'none'
-    slider[0].style.left = ''
-    slider[1].style.left = ''
-    slider[2].style.left = ''
-    slider[0].style.transform = `translate(0)`
-    slider[1].style.transform = `translate(0)`
-    slider[2].style.transform = `translate(0)`
-}
+    offset = 0
+    slider.forEach((el) => { 
+        el.style.transform = `translate(0)`
+        el.style.left = ''
+        el.style.right = ''
+        el.style.transition = 'none'
+    }
+    )}
 
 document.querySelector('.destination').addEventListener('click', (event) => {
-//slider.forEach(el => el.addEventListener('click', (event) => {
-//right = document.querySelector('.right')
-event = event.target.parentElement
-console.log(event.parentElement)
-    if (event.parentElement.classList.contains('destination3')) 
+    
+    slider.forEach(el => el.style.transition = 'all .45s')
+
+
+    if (event.target.classList.contains('right')) 
     {   
-        offset += 850
-        slider[0].style.left = '2550px'
-        slider[0].style.transform = `translate(-${offset}px)`
-        slider[1].style.transform = `translate(-${offset}px)`
-        slider[2].style.transform = `translate(-${offset}px)`
-        slider[2].firstElementChild.classList.toggle('right')
+        offset -= 850
+        offset >= 0 ? slider[0].style.right = '' : slider[0].style.left = '2550px'
+        slider.forEach(el => el.style.transform = `translate(${offset}px)`)
         let slider2 = [slider[1], slider[2], slider[0]]
         slider = slider2
-        slider[2].firstElementChild.classList.toggle('right')}
+        n--
+        
+        
+    }
+    if (event.target.classList.contains('left')) 
+    {   
+        offset += 850
+        offset <= 0 ? slider[2].style.left = '' : slider[2].style.right = '2550px'
+        slider.forEach(el => el.style.transform = `translate(${offset}px)`)
+        let slider2 = [slider[2], slider[0], slider[1]]
+        slider = slider2
+        n++
+    }
+    if (offset === -2550 || offset === 2550) {
+        setTimeout(removestyle, 400)
+    }
+    if (n>2) n=0
+    if (n<0) n=2
+    ellipse.forEach(el => el.classList.remove('active'))
+    ellipse[n].classList.add('active')
     
-    // else if (event.target.classList.contains('left')) 
-    //     {   
-    //         offset -= 850
-    //         slider[2].style.left = '-2550px'
-    //         slider[2].style.transform = `translate(${-offset}px)`
-    //         slider[1].style.transform = `translate(${-offset}px)`
-    //         slider[0].style.transform = `translate(${-offset}px)`
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         let slider2 = [slider[2], slider[0], slider[1]]
-    //         slider = slider2
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         console.log(slider)}
-        //setTimeout(removestyle, 400)
-    //     if (offset === 0) {
-        
-    //         slider[0].style.transition = 'all .5s'
-    //         slider[1].style.transition = 'all .5s'
-    //         slider[2].style.transition = 'all .5s'
-
-    //         offset += 850
-    //         slider[0].style.left = '2550px'
-    //         slider[0].style.transform = `translate(-${offset}px)`
-    //         slider[1].style.transform = `translate(-${offset}px)`
-    //         slider[2].style.transform = `translate(-${offset}px)`
-    //         slider[1].firstElementChild.classList.toggle('left')
-    //         slider[0].firstElementChild.classList.toggle('right')
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         slider[2].firstElementChild.classList.toggle('right')
-        
-    //     } else if(offset === 850 || offset === -1700) {
-    //         removestyle2();
-    //         setTimeout(addstyle, 1);
-    //         let slider2 = [slider[1], slider[0], slider[2]]
-    //         slider=slider2
-    //         console.log(slider)
-    //         // slider[0].style.transition = 'all .5s'
-    //         // slider[1].style.transition = 'all .5s'
-    //         // slider[2].style.transition = 'all .5s'
-    //         // offset += 850
-    //         // slider[1].style.left = '2550px'
-    //         // slider[1].style.transform = `translate(-${offset}px)`
-    //         // slider[0].style.transform = `translate(-${offset}px)`
-    //         // slider[2].style.transform = `translate(-${offset}px)`
-    //         // slider[1].firstElementChild.classList.toggle('left')
-    //         // slider[0].firstElementChild.classList.toggle('right')
-    //         // slider[1].firstElementChild.classList.toggle('right')
-    //         // slider[2].firstElementChild.classList.toggle('left')
-    //     } else if (offset === 1700 || offset === -850) {
-    //         offset += 850
-    //         slider[2].style.left = '2550px'
-    //         slider[2].style.transform = `translate(-${offset}px)`
-    //         slider[0].style.transform = `translate(-${offset}px)`
-    //         slider[1].style.transform = `translate(-${offset}px)`
-    //         slider[1].firstElementChild.classList.toggle('right')
-    //         slider[2].firstElementChild.classList.toggle('right')
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         slider[2].firstElementChild.classList.toggle('left')
-    //         offset = 0
-    //         setTimeout(removestyle, 400)
-    // }
-    // }
-    // else if (event.target.classList.contains('left')) {
-    //     if (offset === 0) {
-        
-    //         slider[0].style.transition = 'all .5s'
-    //         slider[1].style.transition = 'all .5s'
-    //         slider[2].style.transition = 'all .5s'
-    
-    //         offset -= 850
-    //         slider[2].style.left = '-2550px'
-    //         slider[2].style.transform = `translate(${-offset}px)`
-    //         slider[0].style.transform = `translate(${-offset}px)`
-    //         slider[1].style.transform = `translate(${-offset}px)`
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         slider[1].firstElementChild.classList.toggle('right')
-    //         slider[2].firstElementChild.classList.toggle('left')
-    //         slider[2].firstElementChild.classList.toggle('right')
-            
-    //     } else if(offset === -850 || offset === 1700) {
-    //         offset -= 850
-    //         slider[1].style.left = '-2550px'
-    //         slider[1].style.transform = `translate(${-offset}px)`
-    //         slider[0].style.transform = `translate(${-offset}px)`
-    //         slider[2].style.transform = `translate(${-offset}px)`
-    //         slider[1].firstElementChild.classList.toggle('left')
-    //         slider[1].firstElementChild.classList.toggle('right')
-    //         slider[0].firstElementChild.classList.toggle('right')
-    //         slider[2].firstElementChild.classList.toggle('left')
-    //     } else if (offset === -1700 || offset === 850) {
-    //         offset -= 850
-    //         slider[0].style.left = '-2550px'
-    //         slider[0].style.transform = `translate(${-offset}px)`
-    //         slider[1].style.transform = `translate(${-offset}px)`
-    //         slider[2].style.transform = `translate(${-offset}px)`
-    //         slider[0].firstElementChild.classList.toggle('right')
-    //         slider[2].firstElementChild.classList.toggle('right')
-    //         slider[0].firstElementChild.classList.toggle('left')
-    //         slider[1].firstElementChild.classList.toggle('left')
-    //         offset = 0
-    //         setTimeout(removestyle, 400)
-    //     }
-   // }
 })
 
+//mobile slider
+let offsetm = 0
+let d = 0
+document.querySelector('.ico_arr').addEventListener('click', () => {
+    offsetm += 390
+    if (offsetm > 780) offsetm = 0
+    document.querySelector('.destination').style.transform = `translate(-${offsetm}px)`
+    d++
+    if (d>2) d=0
+    ellipse.forEach(el => el.classList.remove('activem'))
+    ellipse[d].classList.add('activem')
+})
+
+document.querySelector('.ico_arrl').addEventListener('click', () => {
+    offsetm -= 390
+    if (offsetm < 0) offsetm = 780
+    document.querySelector('.destination').style.transform = `translate(-${offsetm}px)`
+    d--
+    if (d<0) d=2
+    ellipse.forEach(el => el.classList.remove('activem'))
+    ellipse[d].classList.add('activem')
+})
+
+//end slider
 
 
 
